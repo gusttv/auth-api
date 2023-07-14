@@ -1,9 +1,9 @@
 ## Instalação
 
-Clone o repositório: `git clone https://github.com/gusttv/auth-api.git`
-Faça a instalação das depêndencias: `npm ou yarn install`
-Configure as variáveis de ambiente: crie sua configruação `.env`
-inicie o projeto: `npm ou yarn start`
+1. Clone o repositório: `git clone https://github.com/gusttv/auth-api.git`
+2. Faça a instalação das depêndencias: `npm ou yarn install`
+3. Configure as variáveis de ambiente: crie sua configruação `.env`
+4. inicie o projeto: `npm ou yarn start`
 
 
 ## Utilização
