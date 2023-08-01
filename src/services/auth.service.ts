@@ -14,7 +14,7 @@ export class AuthService {
         password: hashedPassword,
       },
     });
-    return user;
+    return user;                         
   }
 
   public async loginUser(username: string, password: string): Promise<string | null> {
