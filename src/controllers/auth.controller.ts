@@ -54,6 +54,17 @@ export class AuthController {
     const { userId } = req.body.user;
     const { username, password } = req.body;
     try {
+      if (!username || !password) {
+        res.status(400).json({ error: 'Username and password are required for updating user.' });
+        return;
+      }
+
+      // Add authentication check before updating user
+      if (userId !== req.body.user.userId) {
+        res.status(401).json({ error: 'Unauthorized: You are not allowed to update this user.' });
+        return;
+      }
+
       const user = await authService.updateUser(userId, username, password);
       res.status(200).json(user);
       return;
@@ -62,3 +73,4 @@ export class AuthController {
     }
   }
 }
+
